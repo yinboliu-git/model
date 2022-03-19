@@ -81,7 +81,7 @@ class MaxEnt:
                 est_fea[(dimension, val, y)] += self.px[tuple(X)] * py_x
         return est_fea
 
-    def GIS(self):
+    def GIS(self, X_data, y_data):
         # GIS算法更新delta
         est_fea = self._est_fea(X_data, y_data)
         delta = np.zeros(self.n_fea)
